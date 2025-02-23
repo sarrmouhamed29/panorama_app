@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group10Stitch | Créateur de Panorama Futuriste</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <!-- Grid lines animation -->
+  <div class="grid-lines">
+    <div class="horizontal-lines" id="horizontalLines"></div>
+    <div class="vertical-lines" id="verticalLines"></div>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="logo">
+        <i class="fas fa-panorama"></i>
+        Group10Stitch
+      </div>
+    </header>
+
+    <h1>Fusion Panoramique</h1>
+    <p class="subtitle">
+      Assemblez vos images pour créer des vues panoramiques captivantes avec notre technologie de pointe
+    </p>
+
+    <div class="main-section">
+      <!-- Panel d'importation -->
+      <section class="panel">
+        <h2 class="panel-title">
+          <i class="fas fa-upload"></i>
+          Importation d'images
+        </h2>
+
+        <div class="drop-zone" id="dropZone">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <p class="drop-text">Glissez et déposez vos images ici</p>
+          <p>ou <span class="browse-text" id="browseBtn">parcourez vos fichiers</span></p>
+          <input type="file" id="fileInput" class="file-input" multiple accept="image/*">
+        </div>
+
+        <div class="preview-container" id="previewContainer"></div>
+
+        <div class="action-buttons">
+          <button class="btn btn-secondary" id="resetBtn">Réinitialiser</button>
+          <button class="btn btn-primary" id="stitchBtn" disabled>Créer le panorama</button>
+        </div>
+      </section>
+
+      <!-- Panel du résultat -->
+      <section class="panel result-panel">
+        <h2 class="panel-title">
+          <i class="fas fa-image"></i>
+          Résultat
+        </h2>
+
+        <div class="empty-state" id="emptyState">
+          <i class="fas fa-wind"></i>
+          <p class="empty-message">Votre panorama apparaîtra ici après l'assemblage des images</p>
+        </div>
+
+        <div class="loading" id="loading">
+          <div class="cyber-spinner"></div>
+          <p class="loading-text">Fusion en cours</p>
+        </div>
+
+        <img id="resultImg" class="result-img" alt="Image panoramique">
+
+        <button class="btn btn-primary download-btn" id="downloadBtn">
+          <i class="fas fa-download"></i> Télécharger le panorama
+        </button>
+      </section>
+    </div>
+
+    <!-- Section de visualisation du processus -->
+    <section class="process-section hidden" id="processSection">
+      <h2 class="process-title">
+        <i class="fas fa-code-branch"></i>
+        Processus de création du panorama
+      </h2>
+      <div class="process-timeline" id="processTimeline">
+        <!-- Les étapes du processus seront ajoutées ici dynamiquement -->
+      </div>
+    </section>
+  </div>
+
+  <script src="../static/script.js"></script>
+</body>
+</html>
